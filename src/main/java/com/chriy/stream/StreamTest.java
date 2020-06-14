@@ -1,5 +1,9 @@
 package com.chriy.stream;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -67,7 +71,7 @@ public class StreamTest {
         list.forEach(System.out::println);
 
         /*
-            这种方式是先讲流转换称 Collection 集合, 再转称所需要的类型
+            这种方式是先将流转换称 Collection 集合, 再转称所需要的类型
          */
         Stream<String> hi = Stream.of("Hi", "Jer", "You");
         HashSet<String> set = hi.collect(Collectors.toCollection(HashSet::new));
@@ -92,7 +96,56 @@ public class StreamTest {
         System.out.println(statistics.getAverage());
     }
 
+    public static void typeOfStream() {
+        // 串行与并行流
+        List<String> list = Arrays.asList("hello", "hi", "you");
+        list.stream() // 串行短路流
+            .mapToInt(item -> {
+                int len = item.length();
+                System.out.println(item);
+                return len;
+            })
+            .filter(len -> len == 5)
+            .findFirst()
+            .ifPresent(System.out::println);
+
+        list.parallelStream() // 并行流
+            .mapToInt(item -> {
+                int len = item.length();
+                System.out.println(item);
+                return len;
+            })
+            .filter(len -> len == 5)
+            .findFirst()
+            .ifPresent(System.out::println);
+    }
+
+    /**
+     * 分组
+     */
+    public static void groupBy() {
+
+        @Data
+        @AllArgsConstructor
+        @NoArgsConstructor
+        class Student {
+            private String name;
+            private Integer age;
+            private Integer score;
+        }
+
+        List<Student> students = Arrays.asList(
+            new Student("Tom", 12, 80),
+            new Student("Jerry", 14, 80),
+            new Student("John", 16, 90)
+        );
+        // 通过姓名分组
+        System.out.println(students.stream().collect(Collectors.groupingBy(Student::getName)));
+        // 通过分数分组
+        System.out.println(students.stream().collect(Collectors.groupingBy(Student::getScore)));
+    }
+
     public static void main(String[] args) {
-        StreamTest.normalMethod();
+        StreamTest.groupBy();
     }
 }
