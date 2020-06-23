@@ -34,7 +34,7 @@ public class StreamTest {
     }
 
     /**
-     * 对 list 中的每个数加 2 在进行累加或这累乘
+     * 对 list 中的每个数加 2 在进行累加或者累乘
      */
     public static void mapReduce() {
         List<Integer> list = Arrays.asList(1, 2, 3);
@@ -79,6 +79,9 @@ public class StreamTest {
 
     }
 
+    /**
+     * 一些常用的方法
+     */
     public static void normalMethod() {
         // 取出大于5的元素, 全部乘以2, 丢掉前两个, 再取前两个, 求和
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
@@ -96,6 +99,9 @@ public class StreamTest {
         System.out.println(statistics.getAverage());
     }
 
+    /**
+     * 流的类型, 并行流和穿行流
+     */
     public static void typeOfStream() {
         // 串行与并行流
         List<String> list = Arrays.asList("hello", "hi", "you");
@@ -143,6 +149,16 @@ public class StreamTest {
         System.out.println(students.stream().collect(Collectors.groupingBy(Student::getName)));
         // 通过分数分组
         System.out.println(students.stream().collect(Collectors.groupingBy(Student::getScore)));
+        // 分组并计数
+        System.out.println(students.stream().collect(Collectors.groupingBy(Student::getScore, Collectors.counting())));
+        // 分组, 平均值
+        System.out.println(students.stream().collect(Collectors.groupingBy(Student::getScore, Collectors.averagingInt(Student::getAge))));
+
+
+        // 分区 ===> 对应的返回结果是 true or false
+        Map<Boolean, List<Student>> map = students.stream()
+            .collect(Collectors.partitioningBy(student -> student.getAge() > 18));
+        System.out.format("map is : %s", map);
     }
 
     public static void main(String[] args) {
