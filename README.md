@@ -1,7 +1,14 @@
-<p  style="text-align:center;">
-<span style="font-size:24px;display:block;font-weight:700;">Learned Code Of Java 8</span><br/>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="92" height="20"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="92" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path fill="#555" d="M0 0h51v20H0z"/><path fill="#fe7d37" d="M51 0h41v20H51z"/><path fill="url(#b)" d="M0 0h92v20H0z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"> <text x="265" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="410">version</text><text x="265" y="140" transform="scale(.1)" textLength="410">version</text><text x="705" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="310">jdk11</text><text x="705" y="140" transform="scale(.1)" textLength="310">jdk11</text></g> </svg>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="108" height="20"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="108" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path fill="#555" d="M0 0h47v20H0z"/><path fill="#007ec6" d="M47 0h61v20H47z"/><path fill="url(#b)" d="M0 0h108v20H0z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"> <text x="245" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="370">license</text><text x="245" y="140" transform="scale(.1)" textLength="370">license</text><text x="765" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="510">Apache 2</text><text x="765" y="140" transform="scale(.1)" textLength="510">Apache 2</text></g> </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="20"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="96" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path fill="#555" d="M0 0h63v20H0z"/><path fill="#4c1" d="M63 0h33v20H63z"/><path fill="url(#b)" d="M0 0h96v20H0z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"> <text x="325" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="530">keywords</text><text x="325" y="140" transform="scale(.1)" textLength="530">keywords</text><text x="785" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="230">java</text><text x="785" y="140" transform="scale(.1)" textLength="230">java</text></g> </svg>
+<h3 align="center">Java 8</h3>
+<p align="center">
+    <img src="https://img.shields.io/badge/jdk-11-red"/> <img src="https://img.shields.io/badge/jdk-8-blue"/>
 </p>
----
+
+### What this?
+Here some demos for Java 8 🚀 
+- Lambda
+- Functional Interface
+- Predict
+- Consumer
+- Supplier
+- Stream
+
